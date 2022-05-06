@@ -36,10 +36,9 @@ export const getDogById = (id) => {
     });
     };
 };
-
 /* export const getDogById = (id) => {
     return (dispatch) =>{
-    fetch(`/dogs/${id}`)
+    fetch(`http://localhost:3001/dogs/${id}`)
     .then(response => response.json())
         .then((json) => {
             return dispatch({
