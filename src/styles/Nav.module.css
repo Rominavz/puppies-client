@@ -1,0 +1,21 @@
+.nav {
+    align-items: center;
+    background-color: rgb(251, 251, 251);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 80%);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+.navsub {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    width: 53%;
+    font-family: 'Commissioner', sans-serif;
+}
