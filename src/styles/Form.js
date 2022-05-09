@@ -120,7 +120,7 @@ export const Temp = styled.div`
   font-size: 0.9rem;
   color:white;
   img {
-    width: 1.5rem;
+    width: 1rem;
     cursor: pointer;
   }
 `;
