@@ -120,7 +120,7 @@ export const Temp = styled.div`
   font-size: 0.9rem;
   color:white;
   img {
-    width: 1rem;
+    width: 1.3rem;
     cursor: pointer;
    
   }
