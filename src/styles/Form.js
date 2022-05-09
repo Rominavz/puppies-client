@@ -122,6 +122,7 @@ export const Temp = styled.div`
   img {
     width: 1rem;
     cursor: pointer;
+    margin-right: 1%;
   }
 `;
 
