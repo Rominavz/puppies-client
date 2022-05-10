@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { getDogById, cleanDogDetail } from '../actions/';
+import { getDogById, cleanDogDetail, deleteDog } from '../actions/';
 import Loader from "./Loader";
 import styles from "../styles/Detail1.module.css";
 import { MdHome } from "react-icons/md";
