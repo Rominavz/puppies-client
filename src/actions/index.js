@@ -9,7 +9,7 @@ import{
     FILTER_BY_TEMPERAMENT,
     ORDER_DOGS,
     CREATE_DOG,
-   
+    DELETE_DOG,
 } from '../actions/types';
 
 export const getAllDogs = (name) =>{
@@ -96,6 +96,18 @@ export const createDog = (dog) => {
         await axios.post(`/dog`, dog);
             return dispatch ({
                 type: CREATE_DOG,
+            });
+        }catch(error) {
+        console.log(error);
+        }
+    };
+};
+export const deleteDog = (id) => {
+    return async (dispatch) =>{
+    try{
+        await axios.delete(`http://localhost:3001/delete/${id}`);
+            return dispatch ({
+                type: DELETE_DOG,
             });
         }catch(error) {
         console.log(error);

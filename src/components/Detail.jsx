@@ -5,11 +5,22 @@ import { getDogById, cleanDogDetail } from '../actions/';
 import Loader from "./Loader";
 import styles from "../styles/Detail1.module.css";
 import { MdHome } from "react-icons/md";
+import { useHistory } from "react-router-dom";
+import trash from "../assets/trash.png";
 
 export default function Detail() {
     const { id } = useParams();
     const dispatch = useDispatch();
     const { dog } = useSelector((state) => state);  
+
+    const history = useHistory();
+
+    const handleDelete = () => {
+        dispatch(deleteDog(id));
+        alert('Dog deleted');
+        history.push("/home");
+    }
+
     useEffect(() => {
         dispatch(getDogById(id));
         return () => dispatch(cleanDogDetail());
@@ -42,7 +53,14 @@ export default function Detail() {
                                                     return <option key={temp}>{temp}</option>
                                                 })}
                                             </p>
-                                        </div>       
+                                        </div> 
+                                        {dog[0].createdInDb && (  
+                                        <img
+                                          src={trash}  width= '50px'
+                                          alt="trash"
+                                          onClick={handleDelete}
+                                         />   
+                                        )}       
                                 </div>
                             </div>
                     )

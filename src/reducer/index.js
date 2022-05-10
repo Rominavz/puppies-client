@@ -7,6 +7,7 @@ import{
     FILTER_BY_ORIGEN,
     FILTER_BY_TEMPERAMENT,
     ORDER_DOGS,
+    DELETE_DOG,
 } from '../actions/types'
 
 const initialState = {
@@ -29,6 +30,10 @@ function rootReducer(state= initialState, {type, payload}){
             return{
                 ...state,
                 dog: payload,
+            }; 
+        case DELETE_DOG:
+            return{
+                ...state,
             }; 
         case CLEAN_DOG_DETAIL:
             return{
