@@ -105,7 +105,7 @@ export const createDog = (dog) => {
 export const deleteDog = (id) => {
     return async (dispatch) =>{
     try{
-        await axios.delete(`http://localhost:3001/delete/${id}`);
+        await axios.delete(`/delete/${id}`);
             return dispatch ({
                 type: DELETE_DOG,
             });
